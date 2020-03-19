@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="C:/Users/chandra.t/Desktop/MockUpTask/CSS/Website_mockup.css" type="text/CSS">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <script src="C:/Users/chandra.t/Desktop/MockUpTask/JS/validator.js"></script>
+</head>
+
+<body>
+    <div class="contact-container">
+        <div class="header">
+            <p class="header-content">TECHNOVERT</p>
+        </div>
+        <div class="nav-container">
+            <a href="Website_mockuphome.html" class="button"><b>HOME</b></a>
+            <a href="#" class="button"><b>SERVICES</b></a>
+            <a href="Website_mockupcareers.html" class="button"><b>CAREERS</b></a>
+            <a href="Website_mockupcontact.html" class="button"><b>CONTACT</b></a>
+        </div>
+        <div class="form-container">
+            <form action="Website_mockuphome.html" class="contact" name="contact" onsubmit="return validator()">
+                <div class="property">
+                    <p class="requiredinfo">* Required field</p>
+                </div>
+                <div class="property">
+                    <label for="username" class="fieldtext">My Name:</label>
+                    <input class="field" type="text" name="username" onblur="return namevalidator()">
+                    <p class="error">*</p>
+                    <p id="name-required" style="display: none;">Name is required</p>
+                </div>
+                <div class="property">
+                    <label for="email" class="fieldtext">My Email Address:</label>
+                    <input class="field" type="email" name="email" onblur="return emailvalidator()">
+                    <p class="error">*</p>
+                    <p id="email-required" style="display: none;">Email is required</p>
+                </div>
+                <div class="property">
+                    <label for="telephone" class="fieldtext">My Telephone Number:</label>
+                    <input class="field" type="text" name="telephone">
+                </div>
+                <div class="property">
+                    <label for="organisation" class="fieldtext">My Organization Name:</label>
+                    <input class="field" type="text" name="organisation" onblur="return orgvalidator()">
+                    <p class="error">*</p>
+                    <p id="org-required" style="display: none;">Organisation is required</p>
+                </div>
+                <div class="property">
+                    <label for="city" class="fieldtext">My City:</label>
+                    <input class="field" type="text" name="city">
+                </div>
+                <div class="property">
+                    <label for="state" class="fieldtext">My State or Province</label>
+                    <select name="state" id="state">
+                    <option value="">Select State or Province</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madya Pradesh">Madya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Orissa">Orissa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telagana">Telagana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttaranchal">Uttaranchal</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+                </div>
+                <div class="property">
+                    <label for="contacttype" class="fieldtext">Please Contact Me By:</label>
+                    <div class=" radiobox">
+                        <div class="radioboxelement">
+                            <label for="emailtype" class="contacttype">Email</label>
+                            <input class="fieldradio" type="radio" name="contacttype" value="email">
+                        </div>
+                        <div class="radioboxelement">
+                            <label for="phonetype" class="contacttype">Phone</label>
+                            <input class="fieldradio" type="radio" name="contacttype" value="phone">
+                        </div>
+                        <div class="radioboxelement">
+                            <label for="bothtype" class="contacttype">Both</label>
+                            <input class="fieldradio" type="radio" name="contacttype" value="both">
+                        </div>
+                    </div>
+                </div>
+                <div class="property">
+                    <label for="gendetype" class="fieldtext">Gender:</label>
+                    <div class=" radiobox">
+                        <div class="radioboxelement">
+                            <label for="maletype" class="gendertype">Male</label>
+                            <input class="fieldradio" type="radio" name="gendertype" value="male" onclick="return gender(value)">
+                        </div>
+                        <div class="radioboxelement">
+                            <label for="femaletype" class="gendertype">Female</label>
+                            <input class="fieldradio" type="radio" name="gendertype" value="female" onclick="return gender(value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="property">
+                    <label for="promotioncode" class="fieldtext">Promotion Code:</label>
+                    <input class="field" type="text" name="promotion"><br>
+                </div>
+                <div class="optional">
+                    <p class="fieldtext"><b>Optional Information</b></p>
+                    <p><i>This information is optional but it help us to serve you better</i></p>
+                </div>
+                <div class="property">
+                    <label for="website" class="fieldtext">MyWebsite Address is :</label>
+                    <input class="field" type="text" name="website">
+                </div>
+                <div class="property">
+                    <label for="aboutyourorg" class="fieldtext">Tell Us More About Your Organization:</label>
+                    <textarea name="aboutorganisation"></textarea>
+                </div>
+                <div class="property">
+                    <label for="aboutmyorg" class="fieldtext">What I'd really like to know is:</label><br>
+                    <textarea name="aboutorganisation"></textarea>
+                </div>
+                <div class="property">
+                    <button type="submit" class="contactbutton"><b>Send Message</b></button>
+                    <button type="reset" class="contactbutton"><b>Clear Form</b></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
